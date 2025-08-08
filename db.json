@@ -21,6 +21,93 @@
       "role": "ADMIN",
       "createdAt": 1674323738966,
       "updatedAt": 1674323738966
+    },
+    {
+      "id": "7c6f0f6b-42ad-434c-bdd7-3f23b986765a",
+      "first_name": "Tony",
+      "last_name": "Stark",
+      "gender": "M",
+      "email": "stark@industries.com",
+      "password": "$2b$10$mVh6zkZP.Gfs03I7HduFou9xdy5xtUHtNSKLsokEMNBtSu/3Ws1Y6",
+      "role": "CUSTOMER",
+      "createdAt": 1753224604819,
+      "updatedAt": 1753224604819
+    },
+    {
+      "id": "dd194632-fcdf-4fb0-835d-a15ccf116bfb",
+      "createdAt": 1753224782289,
+      "updatedAt": 1753224782289
+    },
+    {
+      "id": "e187ff8f-54a1-44ba-8526-e88f9b265893",
+      "first_name": "Thor",
+      "last_name": "Odinson",
+      "gender": "M",
+      "email": "thor@asgard.com",
+      "password": "$2b$10$A120esmU3/Y1eo1ItJ4I6eUsn8bS1Boh/BhUtPSSZ4J0CjlTz4aQG",
+      "role": "ADMIN",
+      "createdAt": 1753224998225,
+      "updatedAt": 1753224998225
+    },
+    {
+      "id": "276d726a-7962-41ba-a685-8509b98d8ebb",
+      "createdAt": 1753225067760,
+      "updatedAt": 1753225067760
+    },
+    {
+      "id": "1f7643c4-e688-4b9f-935c-1b65b6aaf218",
+      "first_name": "Reed",
+      "last_name": "Richards",
+      "gender": "M",
+      "email": "reed@fantastic.com",
+      "password": "$2b$10$sSFO3hNICaUHAc3JTgVaxO9wMQkFuwlz6xVdB3n7jTQL3CtqwnPnC",
+      "role": "CUSTOMER",
+      "createdAt": 1753994707719,
+      "updatedAt": 1753994707719
+    },
+    {
+      "id": "e15fdb50-ee76-4b13-bc57-290d41c22cba",
+      "first_name": "Franklin",
+      "last_name": "Richards",
+      "gender": "M",
+      "email": "franklin@fantastic.com",
+      "password": "$2b$10$.pQsEcOgXi7A4PDQW25Z/.nbMVEDBp8qZcgZVRrHGrvs9Rz2tU5yG",
+      "role": "ADMIN",
+      "createdAt": 1753995169213,
+      "updatedAt": 1753995169213
+    },
+    {
+      "id": "ddea7d69-c80f-4a4e-8b4a-c21731ee563c",
+      "first_name": "Peter",
+      "last_name": "Parker",
+      "gender": "M",
+      "email": "peter@bugle.com",
+      "password": "$2b$10$HpVUKjbC6W/CrLO.WwaXFerhgc6vpIJidLUuP6IGldfA5FeLW2c2a",
+      "role": "CUSTOMER",
+      "createdAt": 1753997674774,
+      "updatedAt": 1753997674774
+    },
+    {
+      "id": "33ea7033-3c3d-42cc-bb4b-2976e68d124b",
+      "first_name": "Ercita",
+      "last_name": "Armenta",
+      "gender": "M",
+      "email": "ercita@prueba.com",
+      "password": "$2b$10$yVnOnlqtRnsjaQNVoGBYqOZR.u4wzDBaLOqq5QCoSg6m1EaMz8hYu",
+      "role": "CUSTOMER",
+      "createdAt": 1753997813545,
+      "updatedAt": 1753997813545
+    },
+    {
+      "id": "8c173be6-8df4-44f3-a9b2-7507a5955c83",
+      "first_name": "Bruce",
+      "last_name": "Banner",
+      "gender": "M",
+      "email": "bruce@banner.com",
+      "password": "$2b$10$ZQcjk/8g934DALqBzXkyQOmoFBaqfTV/fddblnPOvuNeH7iB6ElzW",
+      "role": "CUSTOMER",
+      "createdAt": 1754010481433,
+      "updatedAt": 1754010481433
     }
   ],
   "items": [
