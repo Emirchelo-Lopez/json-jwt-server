@@ -1,58 +1,65 @@
 /* eslint-disable camelcase */
-const jsonServer = require('json-server')
-const path = require('path')
-const server = jsonServer.create()
-const router = jsonServer.router(path.join(__dirname, 'db.json'))
+const jsonServer = require("json-server");
+const path = require("path");
+const server = jsonServer.create();
+const cors = require("cors");
+const router = jsonServer.router(path.join(__dirname, "db.json"));
 
-const addIdAndTimeStamps = require('./middlewares/addIdAndTimeStamps')
+const addIdAndTimeStamps = require("./middlewares/addIdAndTimeStamps");
 
-const loginEndpoint = require('./endpoints/login')
-const registerEndpoint = require('./endpoints/register')
-const itemsEndpoint = require('./endpoints/items')
-const usersEndpoint = require('./endpoints/users')
-const meEndpoint = require('./endpoints/me')
+const loginEndpoint = require("./endpoints/login");
+const registerEndpoint = require("./endpoints/register");
+const itemsEndpoint = require("./endpoints/items");
+const usersEndpoint = require("./endpoints/users");
+const meEndpoint = require("./endpoints/me");
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
-server.use(jsonServer.defaults())
-server.use(jsonServer.bodyParser)
+const corsOptions = {
+  origin: "https://chatgpt-clone-eight-cyan.vercel.app/",
+  optionsSuccessStatus: 200,
+};
+
+server.use(jsonServer.defaults());
+server.use(jsonServer.bodyParser);
+server.use(cors(corsOptions));
 
 // Middleware para añadir id y timestamps a los objetos que se crean
-server.use(addIdAndTimeStamps)
+server.use(addIdAndTimeStamps);
 
 // Middleware para redireccionar '/users/me' a '/me', ya que json-server no soporta rutas anidadas
 server.use((req, res, next) => {
-  if (req.url === '/users/me') {
-    req.url = '/me'
+  if (req.url === "/users/me") {
+    req.url = "/me";
   }
-  next()
-})
+  next();
+});
 
 // Pasa la instancia de router.db a los endpoints
-usersEndpoint.db = router.db
-itemsEndpoint.db = router.db
-loginEndpoint.db = router.db
-registerEndpoint.db = router.db
-meEndpoint.db = router.db
+usersEndpoint.db = router.db;
+itemsEndpoint.db = router.db;
+loginEndpoint.db = router.db;
+registerEndpoint.db = router.db;
+meEndpoint.db = router.db;
 
 // Ruta '/login' manejada por el endpoint login.js
-server.use('/login', loginEndpoint)
+server.use("/login", loginEndpoint);
 
 // Ruta '/register' manejada por el endpoint register.js
-server.use('/register', registerEndpoint)
+server.use("/register", registerEndpoint);
 
 // Ruta '/items' manejada por el endpoint items.js
-server.use('/items', itemsEndpoint)
+server.use("/items", itemsEndpoint);
 
 // Rutas '/users/:id' y '/users' manejadas por el endpoint users.js
-server.use('/users', usersEndpoint)
+server.use("/users", usersEndpoint);
 
 // Ruta '/me' manejada por el endpoint me.js
-server.use('/me', meEndpoint)
+server.use("/me", meEndpoint);
 
-server.use(router)
+server.use(router);
 
 // Levantamos el servidor
 server.listen(PORT, () => {
-  console.log('JSON Server is running on http://localhost:' + PORT)
-})
+  console.log("JSON Server is running on http://localhost:" + PORT);
+});
