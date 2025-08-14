@@ -16,7 +16,11 @@ const meEndpoint = require("./endpoints/me");
 const PORT = process.env.PORT || 3000;
 
 const corsOptions = {
-  origin: "https://chatgpt-clone-eight-cyan.vercel.app",
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "https://chatgpt-clone-eight-cyan.vercel.app",
+  ],
   optionsSuccessStatus: 200,
 };
 
